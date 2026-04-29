@@ -3,9 +3,12 @@ run-name: Running - ${{ github.event_name }}
 on:
   push:
     branches:
-      - develop
-      - main
-      - FC**
+    - release-01
+    - main
+    branches-ignore:
+    - main
+    paths:
+      - '**.txt'
 jobs:
   on-push:
     runs-on: ubuntu-latest
