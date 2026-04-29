@@ -1,12 +1,12 @@
-name: Github actions - Push Basic Example
+name: Github actions - Push Basic Example 2
 run-name: Running - ${{ github.event_name }}
 on:
   push:
     branches:
-    - release-01
+    - release-1
     - main
-    branches-ignore:
-    - main
+    #branches-ignore:
+    #- main
     paths:
       - '**.txt'
 jobs:
