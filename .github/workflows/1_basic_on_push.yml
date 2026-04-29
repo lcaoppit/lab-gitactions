@@ -1,0 +1,14 @@
+name: Github actions - Push Basic Example
+run-name: Running - ${{ github.event_name }}
+on:
+  push:
+    branches:
+      - develop
+      - main
+      - FC**
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment
+        run: echo "PUSH - Comments of workflow"
